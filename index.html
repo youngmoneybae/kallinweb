@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Onest:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,400&family=Unbounded:wght@800&family=Tenor+Sans&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Onest:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,400&family=Unbounded:wght@800&family=Tenor+Sans&family=Inter+Tight:wght@600&display=swap">
 <style>
 /* Layout: dark, quiet, expensive. Big thin serif for statements, clean sans for facts, champagne used sparingly. Work showcase with live miniature previews is the centrepiece. */
 :root{
@@ -89,6 +89,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .site.w3 .nm b{font:200 40px/.9 var(--display);letter-spacing:-.02em}
 .site.w3 .nm b em{font-style:italic;color:#e03a35}
 .site.w4 .nm b{font:400 20px/1 'Tenor Sans',sans-serif;letter-spacing:.22em}
+.site.w5 .nm b{font:600 25px/1 'Inter Tight','Onest',sans-serif;letter-spacing:-.03em}
+.site.w5 .nm b span{color:#d9805c}
+.site.w5::after{background:linear-gradient(180deg,transparent 40%,rgba(120,60,35,.8))}
 .site .open{position:absolute;right:12px;top:42px;z-index:2;font:500 10px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px;border-radius:999px;background:var(--gold);color:#111;opacity:0;transform:translateY(-4px);transition:opacity .3s,transform .3s}
 .fan.spread .site{--sp:1}
 .site:hover,.site:focus-visible,.site.front{z-index:10;box-shadow:0 60px 110px -30px rgba(0,0,0,.85),0 0 0 1px var(--gold)}
@@ -171,6 +174,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .tags{grid-column:2/4;display:flex;flex-wrap:wrap;gap:8px}
 .tags span{font:400 12px/1 var(--sans);padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:#bec3b7}
 .allwork{display:flex;justify-content:center;margin-top:56px}
+.case.wide{grid-column:1/-1}
+.case.wide .view{aspect-ratio:21/9}
+@media (max-width:860px){.case.wide .view{aspect-ratio:16/10}}
 @media (max-width:860px){.cases{grid-template-columns:minmax(0,1fr)}}
 
 /* SERVICES */
@@ -304,7 +310,7 @@ footer a:hover{color:var(--gold)}
   <section class="work" id="work">
     <div class="wrap">
       <div class="head">
-        <div><span class="k g">Избранные работы</span><h2 style="margin-top:20px">Четыре сайта, <em>четыре характера</em></h2></div>
+        <div><span class="k g">Избранные работы</span><h2 style="margin-top:20px">Пять сайтов, <em>пять характеров</em></h2></div>
         <p>Наведите на карточку, чтобы пролистать сайт. Нажмите, чтобы открыть его целиком: всё работает и на телефоне.</p>
       </div>
       <div class="cases" id="cases"></div>
@@ -421,7 +427,7 @@ footer a:hover{color:var(--gold)}
   function ns(){nav.classList.toggle('s',scrollY>40)}window.addEventListener('scroll',ns,{passive:true});ns();
 
   // marquee
-  var w=['Фотографы','Маникюр','Ресницы','Брови','Репетиторы','Тренеры','Косметологи','Психологи','Видеографы','Массаж','Барберы'],h='';
+  var w=['Фотографы','Фитнес-тренеры','Маникюр','Ресницы','Брови','Репетиторы','Тренеры','Косметологи','Психологи','Видеографы','Массаж','Барберы'],h='';
   for(var r=0;r<2;r++)w.forEach(function(x){h+='<span>'+x+'</span><i>✦</i>'});document.getElementById('marq').innerHTML=h;
 
   // cases
@@ -430,10 +436,11 @@ footer a:hover{color:var(--gold)}
     {p:'wedding/',t:'Свадебный фотограф и видеограф',d:'Кинематографичный стиль, свадебный фильм в широком кадре, тарифы и календарь свободных дат с заявкой.',tags:['Кино','Календарь дат','Видео-тизер'],img:'wedding/img/01.jpg'},
     {p:'portrait/',t:'Портретный фотограф',d:'Яркий дофаминовый стиль, форматы съёмок, портфолио с фильтрами и онлайн-калькулятор стоимости.',tags:['Яркий','Калькулятор цены','Фильтры'],img:'portrait/img/08.jpg'},
     {p:'editorial/',t:'Fashion-фотограф',d:'Сайт как глянцевый журнал: обложка, содержание, съёмки-развороты с палитрой и кредитами.',tags:['Журнал','Развороты','Прайс-лист'],img:'editorial/img/01.jpg'},
-    {p:'bw/',t:'Чёрно-белый портрет',d:'Строгий минимализм: серии с превью при наведении, контактный лист и лаконичный прайс.',tags:['Минимализм','Серии','Контактный лист'],img:'bw/img/01.jpg'}
+    {p:'bw/',t:'Чёрно-белый портрет',d:'Строгий минимализм: серии с превью при наведении, контактный лист и лаконичный прайс.',tags:['Минимализм','Серии','Контактный лист'],img:'bw/img/01.jpg'},
+    {p:'fitness/',t:'Фитнес-тренер для девушек',d:'Тёплый светлый стиль: онлайн и зал, тарифы с переключателем, слайдер «до и после», запись на пробную.',tags:['Светлый','До / после','Тарифы'],img:'fitness/img/09.jpg',wide:1}
   ];
   var cases=document.getElementById('cases');
-  cases.innerHTML=C.map(function(c,i){return '<a class="case rv" href="'+BASE+c.p+'" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>youngmoneybae.github.io/portfolio/'+c.p+'</span></div><div class="view" style="background-image:url('+BASE+c.img+')"><iframe data-src="'+BASE+c.p+'" title="Превью: '+c.t+'" tabindex="-1" loading="lazy" aria-hidden="true"></iframe></div></div><div class="cmeta"><span class="n">0'+(i+1)+'</span><h3>'+c.t+'</h3><span class="go">Открыть ↗</span><p>'+c.d+'</p><div class="tags">'+c.tags.map(function(x){return '<span>'+x+'</span>'}).join('')+'</div></div></a>'}).join('');
+  cases.innerHTML=C.map(function(c,i){return '<a class="case rv'+(c.wide?' wide':'')+'" href="'+BASE+c.p+'" target="_blank" rel="noopener"><div class="frame"><div class="chrome"><i></i><i></i><i></i><span>youngmoneybae.github.io/portfolio/'+c.p+'</span></div><div class="view" style="background-image:url('+BASE+c.img+')"><iframe data-src="'+BASE+c.p+'" title="Превью: '+c.t+'" tabindex="-1" loading="lazy" aria-hidden="true"></iframe></div></div><div class="cmeta"><span class="n">0'+(i+1)+'</span><h3>'+c.t+'</h3><span class="go">Открыть ↗</span><p>'+c.d+'</p><div class="tags">'+c.tags.map(function(x){return '<span>'+x+'</span>'}).join('')+'</div></div></a>'}).join('');
   var frames=[].slice.call(cases.querySelectorAll('.view'));
   function fit(){frames.forEach(function(v){var f=v.querySelector('iframe'),s=v.clientWidth/1440;f.style.transform='scale('+s+')';v.style.setProperty('--scroll',-(2700-v.clientHeight/s)+'px')})}
   fit();window.addEventListener('resize',fit);
@@ -485,10 +492,11 @@ footer a:hover{color:var(--gold)}
     {c:'w1',p:'wedding/',img:'wedding/img/01.jpg',k:'Свадебный фотограф',n:'Вера Ланская'},
     {c:'w2',p:'portrait/',img:'portrait/img/08.jpg',k:'Портретный фотограф',n:'Ника Рей'},
     {c:'w3',p:'editorial/',img:'editorial/img/01.jpg',k:'Fashion · журнал',n:'Марта <em>Вейс</em>'},
-    {c:'w4',p:'bw/',img:'bw/img/01.jpg',k:'Чёрно-белый портрет',n:'ГЛЕБ ОРЛОВ'}
+    {c:'w4',p:'bw/',img:'bw/img/01.jpg',k:'Чёрно-белый портрет',n:'ГЛЕБ ОРЛОВ'},
+    {c:'w5',p:'fitness/',img:'fitness/img/09.jpg',k:'Фитнес-тренер',n:'Алина Ветрова<span>.</span>'}
   ];
-  var POS=[[-118,24,-14,0],[-40,-6,-5,20],[40,-6,5,40],[118,24,14,60]];
-  var SPREAD=[[-168,36,-16,0],[-58,-12,-5,20],[58,-12,5,40],[168,36,16,60]];
+  var POS=[[-140,34,-16,0],[-70,4,-8,15],[0,-8,0,30],[70,4,8,45],[140,34,16,60]];
+  var SPREAD=[[-184,44,-18,0],[-92,6,-9,15],[0,-12,0,30],[92,6,9,45],[184,44,18,60]];
   var fanIn=document.getElementById('fanIn'),fan=document.getElementById('fan');
   fanIn.innerHTML=S.map(function(x,i){return '<a class="site '+x.c+'" href="'+BASE2+x.p+'" target="_blank" rel="noopener" style="--d:'+(-i*1.4)+'s"><div class="ch2"><i></i><i></i><i></i><span>'+x.p.replace('/','')+'</span></div><img src="'+BASE2+x.img+'" alt="" loading="eager"><span class="open">Открыть ↗</span><div class="nm"><small>'+x.k+'</small><b>'+x.n+'</b></div></a>'}).join('');
   var cards=[].slice.call(fanIn.children),hover=-1,spread=false;
