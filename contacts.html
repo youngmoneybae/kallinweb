@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контакты и заявка на сайт — Никита</title>
+  <meta name="description" content="Оставьте заявку на создание сайта, SEO, GEO/AEO-оптимизацию или ИИ-консультанта. Отвечу в течение часа. Telegram @youngmoneybae.">
+  <link rel="canonical" href="https://svirinymb.ru/contacts.html">
+  <meta name="theme-color" content="#07060b">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Контакты — обсудим ваш проект">
+  <meta property="og:url" content="https://svirinymb.ru/contacts.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23c4b5fd'/%3E%3Cstop offset='1' stop-color='%237c3aed'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2307060b'/%3E%3Cpath d='M32 10l6 16 16 6-16 6-6 16-6-16-16-6 16-6z' fill='url(%23g)'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=13">
+</head>
+<body data-page="contacts">
+  <div class="bg" aria-hidden="true">
+    <canvas class="bg__shader" id="bgShader"></canvas>
+    <div class="bg__glow bg__glow--1"></div>
+    <div class="bg__glow bg__glow--2"></div>
+    <div class="bg__grid"></div>
+    <div class="bg__grain"></div>
+  </div>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="На главную">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">svirinymb<span>.ru</span></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="index.html" data-page="home">Главная</a>
+        <a href="services.html" data-page="services">Услуги</a>
+        <a href="prices.html" data-page="prices">Цены</a>
+        <a href="works.html" data-page="works">Работы</a>
+        <a href="contacts.html" data-page="contacts">Контакты</a>
+      </nav>
+      <a href="contacts.html" class="btn btn--small btn--primary header__cta">Оставить заявку</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="lead">
+      <div class="container">
+        <h1 class="eyebrow reveal">Заявка · отвечаю в течение часа</h1>
+
+        <div class="lead__stage reveal">
+          <form class="lead__form" id="leadForm" novalidate>
+            <p class="lead__pick" id="leadPick" hidden>
+              <span>Услуга</span> <b id="leadPickName"></b>
+              <button type="button" class="lead__pick-x" id="leadPickClear" aria-label="Убрать услугу">×</button>
+            </p>
+            <p class="lead__text">
+              Привет, меня зовут
+              <span class="slot"><input class="slot__input" id="f-name" name="name" type="text" placeholder="имя" autocomplete="given-name" aria-label="Ваше имя"><span class="slot__line" aria-hidden="true"></span></span>.
+              Хочу обсудить проект — напишу вам&nbsp;в
+            </p>
+
+            <div class="dm">
+              <a class="dm__btn dm__btn--tg magnetic" href="https://t.me/youngmoneybae" target="_blank" rel="noopener" data-dm>
+                <span class="dm__name">Telegram</span>
+                <span class="dm__handle">@youngmoneybae</span>
+                <span class="dm__arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="dm__btn dm__btn--ig magnetic" href="https://instagram.com/youngmoneybae" target="_blank" rel="noopener" data-dm>
+                <span class="dm__name">Instagram</span>
+                <span class="dm__handle">@youngmoneybae</span>
+                <span class="dm__arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <p class="lead__hint" id="leadHint" role="status">Текст сообщения скопируется сам — останется вставить его в чат.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span class="js-year"></span> Никита · svirinymb.ru</span>
+      <nav class="footer__nav" aria-label="Вкладки сайта"><a href="services.html">Услуги</a><a href="prices.html">Цены</a><a href="works.html">Работы</a><a href="contacts.html">Контакты</a></nav>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="bg.js?v=13"></script>
+  <script src="script.js?v=13"></script>
+</body>
+</html>

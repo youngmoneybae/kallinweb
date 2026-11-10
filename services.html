@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Услуги: сайты, SEO, GEO/AEO, ИИ-консультанты — Никита</title>
+  <meta name="description" content="Лендинги, многостраничные сайты, сайт + SEO, SEO-настройка, GEO/AEO-оптимизация под нейросети, ИИ-консультанты и автоматизация заявок с сайта.">
+  <link rel="canonical" href="https://svirinymb.ru/services.html">
+  <meta name="theme-color" content="#07060b">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Услуги — сайты, SEO, GEO и ИИ-боты">
+  <meta property="og:url" content="https://svirinymb.ru/services.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23c4b5fd'/%3E%3Cstop offset='1' stop-color='%237c3aed'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2307060b'/%3E%3Cpath d='M32 10l6 16 16 6-16 6-6 16-6-16-16-6 16-6z' fill='url(%23g)'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=13">
+</head>
+<body data-page="services">
+  <div class="bg" aria-hidden="true">
+    <canvas class="bg__shader" id="bgShader"></canvas>
+    <div class="bg__glow bg__glow--1"></div>
+    <div class="bg__glow bg__glow--2"></div>
+    <div class="bg__grid"></div>
+    <div class="bg__grain"></div>
+  </div>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="На главную">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">svirinymb<span>.ru</span></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="index.html" data-page="home">Главная</a>
+        <a href="services.html" data-page="services">Услуги</a>
+        <a href="prices.html" data-page="prices">Цены</a>
+        <a href="works.html" data-page="works">Работы</a>
+        <a href="contacts.html" data-page="contacts">Контакты</a>
+      </nav>
+      <a href="contacts.html" class="btn btn--small btn--primary header__cta">Оставить заявку</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow reveal">Услуги</p>
+        <h1 class="page-hero__title reveal">Всё, чтобы сайт приводил клиентов</h1>
+        <p class="page-hero__lead reveal">Выберите направление. Нажмите на карточку, чтобы узнать подробности, а цены смотрите на вкладке <a href="prices.html">«Цены»</a>.</p>
+      </div>
+    </section>
+
+    <section class="section section--flush">
+      <div class="container">
+        <div class="seg reveal" id="serviceFilter" role="tablist" aria-label="Фильтр услуг">
+          <button class="seg__btn is-active" data-filter="all" role="tab" aria-selected="true">Все</button>
+          <button class="seg__btn" data-filter="dev" role="tab" aria-selected="false">Разработка</button>
+          <button class="seg__btn" data-filter="promo" role="tab" aria-selected="false">Продвижение</button>
+          <button class="seg__btn" data-filter="ai" role="tab" aria-selected="false">ИИ и автоматизация</button>
+          <span class="seg__pill" aria-hidden="true"></span>
+        </div>
+
+        <div class="catalog" id="catalog">
+          <article class="card reveal" data-cat="dev">
+            <div class="card__icon">◐</div>
+            <span class="card__tag">Разработка</span>
+            <h3>Лендинг</h3>
+            <p>Одностраничный сайт под одну услугу или продукт: продающая структура, тексты, форма заявки.</p>
+            <ul class="card__list"><li>Адаптив под телефоны</li><li>Анимации и уникальный дизайн</li><li>Форма заявки в Telegram</li></ul>
+            <div class="card__foot"><button class="card__more" data-open="landing">Подробнее</button><a class="card__price-link" href="prices.html#landing">Цена →</a></div>
+          </article>
+
+          <article class="card reveal" data-cat="dev">
+            <div class="card__icon">▦</div>
+            <span class="card__tag">Разработка</span>
+            <h3>Многостраничный сайт</h3>
+            <p>Полноценный сайт эксперта, блогера или компании: страницы услуг, цены, портфолио, контакты.</p>
+            <ul class="card__list"><li>Отдельная страница под каждую услугу</li><li>Каталог и прайс</li><li>Удобная навигация</li></ul>
+            <div class="card__foot"><button class="card__more" data-open="site">Подробнее</button><a class="card__price-link" href="prices.html#site">Цена →</a></div>
+          </article>
+
+          <article class="card card--hot reveal" data-cat="dev promo">
+            <div class="card__badge">Выгодно</div>
+            <div class="card__icon">✦</div>
+            <span class="card__tag">Под ключ</span>
+            <h3>Сайт + SEO</h3>
+            <p>Создание сайта сразу с правильной SEO-основой: структура, метатеги, скорость, индексация.</p>
+            <ul class="card__list"><li>Многостраничный сайт</li><li>Полная SEO-настройка</li><li>Подключение аналитики</li></ul>
+            <div class="card__foot"><button class="card__more" data-open="combo">Подробнее</button><a class="card__price-link" href="prices.html#combo">Цена →</a></div>
+          </article>
+
+          <article class="card reveal" data-cat="promo">
+            <div class="card__icon">⌕</div>
+            <span class="card__tag">Продвижение</span>
+            <h3>SEO-настройка сайта</h3>
+            <p>Техническая и базовая SEO-оптимизация, чтобы сайт индексировался и рос в Яндексе и Google.</p>
+            <ul class="card__list"><li>Метатеги и семантика</li><li>sitemap, robots, микроразметка</li><li>Вебмастер и Метрика</li></ul>
+            <div class="card__foot"><button class="card__more" data-open="seo">Подробнее</button><a class="card__price-link" href="prices.html#seo">Цена →</a></div>
+          </article>
+
+          <article class="card reveal" data-cat="promo ai">
+            <div class="card__badge card__badge--new">Новое</div>
+            <div class="card__icon">◎</div>
+            <span class="card__tag">Продвижение</span>
+            <h3>GEO / AEO-оптимизация</h3>
+            <p>Оптимизация под ответы нейросетей: чтобы ChatGPT, Алиса и Perplexity знали и рекомендовали вас.</p>
+            <ul class="card__list"><li>llms.txt и Schema.org</li><li>Блоки «вопрос — ответ»</li><li>Проверка упоминаний в ИИ</li></ul>
+            <div class="card__foot"><button class="card__more" data-open="geo">Подробнее</button><a class="card__price-link" href="prices.html#geo">Цена →</a></div>
+          </article>
+
+          <article class="card reveal" data-cat="ai">
+            <div class="card__icon">◈</div>
+            <span class="card__tag">ИИ</span>
+            <h3>ИИ-консультант / бот-помощник</h3>
+            <p>Умный ассистент на сайте или в Telegram, который отвечает клиентам и записывает их 24/7.</p>
+            <ul class="card__list"><li>Обучен на ваших услугах</li><li>Запись и сбор контактов</li><li>Виджет на сайт или Telegram</li></ul>
+            <div class="card__foot"><button class="card__more" data-open="bot">Подробнее</button><a class="card__price-link" href="prices.html#bot">Цена →</a></div>
+          </article>
+
+          <article class="card reveal" data-cat="ai">
+            <div class="card__icon">⇄</div>
+            <span class="card__tag">Автоматизация</span>
+            <h3>Автоматизация заявок</h3>
+            <p>Форма сайта отправляет заявки прямо в Telegram, таблицу или CRM. Ни одна заявка не потеряется.</p>
+            <ul class="card__list"><li>Telegram / почта / Google Таблицы</li><li>Автоответ клиенту</li><li>Защита от спама</li></ul>
+            <div class="card__foot"><button class="card__more" data-open="auto">Подробнее</button><a class="card__price-link" href="prices.html#auto">Цена →</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span class="js-year"></span> Никита · svirinymb.ru</span>
+      <nav class="footer__nav" aria-label="Вкладки сайта"><a href="services.html">Услуги</a><a href="prices.html">Цены</a><a href="works.html">Работы</a><a href="contacts.html">Контакты</a></nav>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box" data-lenis-prevent role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" data-close aria-label="Закрыть">×</button>
+      <span class="card__tag" id="modalTag"></span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+      <ul class="card__list" id="modalList"></ul>
+      <div class="modal__foot">
+        <a href="prices.html" class="link-arrow" id="modalPrice">Смотреть цену</a>
+        <a href="contacts.html" class="btn btn--primary" id="modalCta">Заказать</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="bg.js?v=13"></script>
+  <script src="script.js?v=13"></script>
+</body>
+</html>
