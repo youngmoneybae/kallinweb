@@ -11,11 +11,11 @@
   <meta property="og:locale" content="ru_RU">
   <meta property="og:title" content="Работы — портфолио сайтов">
   <meta property="og:url" content="https://svirinymb.ru/works.html">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23c4b5fd'/%3E%3Cstop offset='1' stop-color='%237c3aed'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2307060b'/%3E%3Cpath d='M32 10l6 16 16 6-16 6-6 16-6-16-16-6 16-6z' fill='url(%23g)'/%3E%3C/svg%3E">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=13">
+  <link rel="stylesheet" href="styles.css?v=14">
 </head>
 <body data-page="works">
   <div class="bg" aria-hidden="true">
@@ -29,9 +29,17 @@
 
   <header class="header" id="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo" aria-label="На главную">
-        <span class="logo__mark">✦</span>
-        <span class="logo__text">svirinymb<span>.ru</span></span>
+      <a href="index.html" class="logo" aria-label="svirin — на главную">
+        <span class="seal" aria-hidden="true">
+          <svg viewBox="0 0 64 64">
+            <defs><path id="sealRing" d="M32 32 m-23 0 a23 23 0 1 1 46 0 a23 23 0 1 1 -46 0"/></defs>
+            <circle class="seal__edge" cx="32" cy="32" r="30.5"/>
+            <g class="seal__ring"><text><textPath href="#sealRing" textLength="142">SITES · SEO · GEO · AI ·</textPath></text></g>
+            <circle class="seal__core" cx="32" cy="32" r="15"/>
+            <path class="seal__s" d="M37.6 26.6c0-3.1-11.2-4-11.2 1.4 0 5.3 11.2 3.1 11.2 8.8 0 5.2-11.7 4.6-11.7.9"/>
+          </svg>
+        </span>
+        <span class="logo__text">svirin</span>
       </a>
       <nav class="nav" id="nav" aria-label="Основная навигация">
         <a href="index.html" data-page="home">Главная</a>
@@ -110,7 +118,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="bg.js?v=13"></script>
-  <script src="script.js?v=13"></script>
+  <script src="bg.js?v=14"></script>
+  <script src="script.js?v=14"></script>
 </body>
 </html>
